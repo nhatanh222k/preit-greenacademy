@@ -2,7 +2,7 @@
 //
 
 #include <iostream>
-
+#include <conio.h>
 int main()
 {
     std::cout << "\t\t\t\t\t\t\t**\n";
@@ -21,6 +21,7 @@ int main()
     std::cout << "\t\t\t                    ||********======********||\n";
     std::cout << "\t\t\t                   ============================\n";
     std::cout << "\t\t\t                  ******************************\n";
+    _getch();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
