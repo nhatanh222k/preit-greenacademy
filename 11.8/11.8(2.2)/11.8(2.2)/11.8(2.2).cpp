@@ -4,25 +4,26 @@
 #include <iostream>
 #include<stdio.h>
 #include<conio.h>
+using namespace std;
 int main()
 {
     double a, b, c, d;
-    cout<<"Nhap diem Listening: ");
-    scanf_s("%f", &a);
-    printf("Nhap diem Speaking: ");
-    scanf_s("%f", &b);
-    printf("Nhap diem Reading: ");
-    scanf_s("%f", &c);
-    printf("Nhap diem Writing: ");
-    scanf_s("%f", &d);
+    cout<<"Nhap diem Listening: ";
+    cin >> a;
+    cout<<"Nhap diem Speaking: ";
+    cin >> b;
+    cout<<"Nhap diem Reading: ";
+    cin >> c;
+    cout<<"Nhap diem Writing: ";
+    cin >> d;
     double x = (a + b + c + d)/4;
     if (x >= 4.5) {
-        printf("Dau roi");
+        cout<<"Dau roi";
     }
     else{
-        printf("Tach roi");
+        cout<<"Tach roi";
     }
-
+    _getch();
 
 }
 
