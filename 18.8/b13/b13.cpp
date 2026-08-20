@@ -2,6 +2,7 @@
 //
 
 #include <iostream>
+#include<conio.h>
 using namespace std;
 int main()
 {
@@ -42,6 +43,7 @@ int main()
         else
             cout << "Lua chon khong hop le!";
     }
+    _getch();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

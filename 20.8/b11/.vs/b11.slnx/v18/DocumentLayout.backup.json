@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\preit-greenacademy\\20.8\\b11\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7CBE8CA2-0070-4E30-8B83-3B225CB76D05}|b11\\b11.vcxproj|C:\\Users\\Admin\\preit-greenacademy\\20.8\\b11\\b11\\b11.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7CBE8CA2-0070-4E30-8B83-3B225CB76D05}|b11\\b11.vcxproj|solutionrelative:b11\\b11.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "b11.cpp",
+              "DocumentMoniker": "C:\\Users\\Admin\\preit-greenacademy\\20.8\\b11\\b11\\b11.cpp",
+              "RelativeDocumentMoniker": "b11\\b11.cpp",
+              "ToolTip": "C:\\Users\\Admin\\preit-greenacademy\\20.8\\b11\\b11\\b11.cpp*",
+              "RelativeToolTip": "b11\\b11.cpp*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-08-20T14:01:52.714Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
