@@ -5,12 +5,13 @@
 using namespace std;
 int main()
 {
-    int hinh,dang,dai,rong,day,cao;
+    int hinh,dang,dai,rong,cao;
     cout << "Chon hinh rong hoac khong rong(rong:0/Khong rong:1):";
     cin >> hinh;
     if (hinh == 1) {
         cout << "Chon hinh chu nhat hoac tam giac(chu nhat:0/tam giac:1): ";
         cin >> dang;
+        //chu nhat va vuong kin
         if (dang == 0) {
             cout << "Nhap vao lan luot chieu dai va rong cua hinh chu nhat:";
             cin >> dai >> rong;
@@ -21,19 +22,55 @@ int main()
                 cout << "\n";
             }
         }
+        //tam giac vuong can kin
         else if (dang == 1) {
-            cout << "Nhap vao lan luot chieu cao va do dai day tam giac vuong: ";
-            cin >> cao >> day;
+            cout << "Nhap vao chieu cao tam giac vuong: ";
+            cin >> cao ;
             for (int i = 1;i <= cao;i++) {
-                for (int j = 1;j <= day;j++) {
-                    for (int a = 1; a <= j;a++) {
-                        cout << "*";
-                    }
-                    cout << "\n";
-              }
-          }
+                for (int j = 1; j <= i;j++) {
+                     cout << "*";
+                }
+                cout << "\n";
+            }
         }
     }
+    else if (hinh == 0) {
+        cout << "Chon hinh chu nhat hoac tam giac(chu nhat:0/tam giac:1): ";
+        cin >> dang;
+        //chu nhat va vuong rong
+        if (dang == 0) {
+            cout << "Nhap vao lan luot chieu dai va rong cua hinh chu nhat:";
+            cin >> dai >> rong;
+            for (int i = 1;i <= rong;i++) {
+                for (int j = 1;j <= dai;j++) {
+                    if (i == 1 || i == rong || j == 1 || j == dai) {
+                        cout << "*";
+                    }
+                    else {
+                        cout << " ";
+                    }
+                }
+                cout << "\n";
+            }
+        }
+        //tam giac vuong can rong
+        else if (dang == 1) {
+            cout << "Nhap vao chieu cao tam giac vuong: ";
+            cin >> cao;
+            for (int i = 1;i <= cao;i++) {
+                for (int j = 1; j <= i;j++) {
+                    if (i == cao || j == 1 || i == j) {
+                        cout << "*";
+                    }
+                    else {
+                        cout<<" ";
+                    }
+                }
+                cout << "\n";
+            }
+        }
+    }
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
