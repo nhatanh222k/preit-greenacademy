@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "b10(while)\\x64\\Debug\\b10(while).obj",
+            "outputs": [
+                "b10(while)\\x64\\Debug\\b10(while).cpp.obj.dt.module.json",
+                "b10(while)\\x64\\Debug\\b10(while).cpp.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

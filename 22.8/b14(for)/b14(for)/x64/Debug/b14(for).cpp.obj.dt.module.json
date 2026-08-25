@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "b14(for)\\x64\\Debug\\b14(for).obj",
+            "outputs": [
+                "b14(for)\\x64\\Debug\\b14(for).cpp.obj.dt.module.json",
+                "b14(for)\\x64\\Debug\\b14(for).cpp.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}
