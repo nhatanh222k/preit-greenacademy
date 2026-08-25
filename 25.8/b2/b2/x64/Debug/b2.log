@@ -1,0 +1,9 @@
+﻿  b2.cpp
+C:\Users\Admin\preit-greenacademy\25.8\b2\b2\b2.cpp(8,28): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Admin\preit-greenacademy\25.8\b2\b2\b2.cpp(8,38): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Admin\preit-greenacademy\25.8\b2\b2\b2.cpp(8,44): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Admin\preit-greenacademy\25.8\b2\b2\b2.cpp(8,79): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Admin\preit-greenacademy\25.8\b2\b2\b2.cpp(8,89): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Admin\preit-greenacademy\25.8\b2\b2\b2.cpp(8,109): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Admin\preit-greenacademy\25.8\b2\b2\b2.cpp(47,22): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+  b2.vcxproj -> C:\Users\Admin\preit-greenacademy\25.8\b2\x64\Debug\b2.exe
