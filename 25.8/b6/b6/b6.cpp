@@ -3,9 +3,36 @@
 
 #include <iostream>
 using namespace std;
-int main()
-{
-    
+
+void inMang(int a[], int n) {
+    for (int i = 0; i < n; i++) {
+        cout << a[i] << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    int a[6] = { 2, 3, 4, 5 };
+    int n = 4;
+    cout << "Mang ban dau: ";
+    inMang(a, n);
+    if (n < 6) {
+        a[n] = 6; 
+        n++;     
+    }
+    cout << "Sau khi them 6 vao cuoi: ";
+    inMang(a, n);  
+    if (n < 6) {
+        for (int i = n; i > 0; i--) {
+            a[i] = a[i - 1];
+        }
+        a[0] = 1;
+        n++;
+    }
+    cout << "Sau khi them 1 vao dau: ";
+    inMang(a, n);
+
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
