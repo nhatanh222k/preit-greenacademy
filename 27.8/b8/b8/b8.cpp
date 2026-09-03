@@ -62,6 +62,7 @@ int main()
     
     cout << "Nhap vao lan luot cac phan tu trong mang: ";
     for (int i = 0;i < n;i++) {
+        cout << "a[" << i << "] = ";
         cin >> a[i];
     }
     cout << "Phan tu co gia tri lon nhat trong mang la: ";
