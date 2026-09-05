@@ -1,0 +1,3 @@
+﻿  b11.cpp
+C:\Users\Admin\preit-greenacademy\5.9\b11\b11\b11.cpp(32,1): warning C4715: 'GiaiPhuongTrinh': not all control paths return a value
+  b11.vcxproj -> C:\Users\Admin\preit-greenacademy\5.9\b11\x64\Debug\b11.exe

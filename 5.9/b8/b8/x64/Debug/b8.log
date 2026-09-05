@@ -1,0 +1,8 @@
+﻿  b8.cpp
+C:\Users\Admin\preit-greenacademy\5.9\b8\b8\b8.cpp(8,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\preit-greenacademy\5.9\b8\b8\b8.cpp(13,15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Admin\preit-greenacademy\5.9\b8\b8\b8.cpp(18,11): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Admin\preit-greenacademy\5.9\b8\b8\b8.cpp(23,11): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Admin\preit-greenacademy\5.9\b8\b8\b8.cpp(28,11): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Admin\preit-greenacademy\5.9\b8\b8\b8.cpp(33,19): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  b8.vcxproj -> C:\Users\Admin\preit-greenacademy\5.9\b8\x64\Debug\b8.exe
