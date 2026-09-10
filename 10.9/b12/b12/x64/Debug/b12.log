@@ -1,0 +1,4 @@
+﻿  b12.cpp
+C:\Users\Admin\preit-greenacademy\10.9\b12\b12\b12.cpp(15,10): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Admin\preit-greenacademy\10.9\b12\b12\b12.cpp(24,1): warning C4715: 'PasswordValidation': not all control paths return a value
+  b12.vcxproj -> C:\Users\Admin\preit-greenacademy\10.9\b12\x64\Debug\b12.exe
