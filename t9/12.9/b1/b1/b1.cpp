@@ -2,10 +2,35 @@
 //
 
 #include <iostream>
-
+#include<string>
+#include<iomanip>
+using namespace std;
+struct Nhanvien{
+    char MaNV[5];
+    char HoTen[50];
+    char ChVu[20];
+    int TNCT;
+    int NP;
+};
 int main()
 {
-    std::cout << "Hello World!\n";
+    Nhanvien dsNV[5] = {
+        {"DI01","Nguyen Kim Long","Giam doc",47,17},
+        {"AC05","Dau Thi Duyen","Ke toan",47,25},
+        {"HR03","Tran Ha Lan","Nhan su",22,7},
+        {"TR02","Tran Ngoc Thoa","Giao vu",13,9},
+        {"IT04","Tran Ngoc Dang","IT",4,2},
+    };
+    cout <<left<< setw(8) << "Ma NV" << setw(22) << "Ho ten" << setw(15) << "Chuc vu" << setw(8) << "TNCT" << setw(5) << "Phep\n";
+    cout << "----------------------------------------------------------------------------\n";
+    for (int i = 0; i < 5; i++) {
+        cout << left
+            << setw(8) << dsNV[i].MaNV
+            << setw(22) << dsNV[i].HoTen
+            << setw(15) << dsNV[i].ChVu
+            << setw(8) << dsNV[i].TNCT
+            << dsNV[i].NP << "\n";
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
