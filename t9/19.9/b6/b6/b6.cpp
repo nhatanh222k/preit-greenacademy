@@ -106,7 +106,7 @@ int main() {
         << setw(16) << "Gio hoc"
         << right << setw(6) << "Phong" << endl;
     cout << "----------------------------------------------------------------------------" << endl;
-
+    
     for (int i = 0; i < n; i++) {
         cout << left
             << setw(18) << dsLopHoc[i].chiNhanh
@@ -117,6 +117,7 @@ int main() {
     }
     delete[] dsLopHoc;
     return 0;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
