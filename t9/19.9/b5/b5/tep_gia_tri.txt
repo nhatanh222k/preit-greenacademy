@@ -1,0 +1,2 @@
+So luong phan tu su dung trong mang: 10
+Gia tri cac phan tu la: 3 4 2 6 6 7 3 1 5 7.

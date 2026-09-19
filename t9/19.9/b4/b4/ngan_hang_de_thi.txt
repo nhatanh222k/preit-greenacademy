@@ -1,0 +1,10 @@
+Cho biet 1 van co gia tri so nao?	1	10	1000	10000	D	5
+Thu do cua Viet Nam la thanh pho nao?	Hue	Ha Noi	Da Nang	Hai Phong	B	5
+Ket qua cua phep tinh 12 + 8 la bao nhieu?	18	19	20	21	C	5
+Hanh tinh nao gan Mat Troi nhat?	Trai Dat	Sao Hoa	Sao Kim	Sao Thuy	D	5
+Nuoc co cong thuc hoa hoc la gi?	CO2	H2O	O2	NaCl	B	5
+Mot nam thong thuong co bao nhieu thang?	10	11	12	13	C	5
+Tac gia cua Truyen Kieu la ai?	Nguyen Du	Nguyen Trai	Ho Xuan Huong	Nam Cao	A	5
+Ket qua cua phep tinh 7 * 8 la bao nhieu?	54	56	58	64	B	5
+Don vi do cuong do dong dien la gi?	Von	Ampe	Om	Oat	B	5
+Quoc gia nao co hinh dang lanh tho giong chiec ung tren ban do chau Au?	Phap	Duc	Y	Tay Ban Nha	C	5

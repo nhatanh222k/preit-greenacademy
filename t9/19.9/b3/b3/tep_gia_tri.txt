@@ -1,0 +1,2 @@
+So luong phan tu su dung trong mang: 5
+Gia tri cac phan tu la: 12 234 43 123 54.
