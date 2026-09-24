@@ -4,6 +4,7 @@
 #include <iostream>
 #include<fstream>
 #include<string>
+#include<Windows.h>
 using namespace std;
 struct VE {
     char hang;
@@ -28,17 +29,36 @@ void docfile() {
     }
 }
 void HienThiSoDoChoNgoi(int marap) {
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     cout << "\t\t\t\tSO DO CHO NGOI";
     cout << "\n=================================================================================\n";
-    cout << "MAN HINH\n";
+    cout << "\t\t\t\t   MAN HINH\n";
+    cout << "\n=================================================================================\n";
     for (char i = 'A';i <= 'J';i++) {
         cout << i << "     ";
         for (int j = 1;j <= 12;j++) {
-            if (j < 10) {
-                cout << "  " << "[0" << j << "]";
+            
+            bool damua = false;
+            for (int k = 0;k < SoLuongVe;k++) {
+                if (dsach[k].hang == i &&
+                    dsach[k].so == j &&
+                    dsach[k].rap == marap) {
+                    damua = true;
+                    break;
+                }
             }
-            else {
-                cout << "  [" << j << "]";
+            if (damua) {
+                SetConsoleTextAttribute(hConsole, 12);
+                cout << "  [XX]";
+                SetConsoleTextAttribute(hConsole, 15);
+            }
+            else {              
+                if (j < 10) {
+                    cout << "  " << "[0" << j << "]";
+                }
+                else {
+                    cout << "  [" << j << "]";
+                }
             }
         }
         cout << "\n";
