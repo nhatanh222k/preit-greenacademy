@@ -1,4 +1,9 @@
 ﻿demo/.vs
 demo/demo/obj
 .vs/
-t10
+
+t10/3.10/3.10/Library
+t10/3.10/3.10/Logs
+t10/3.10/3.10/obj
+t10/3.10/3.10/Temp
+t10/3.10/3.10/UserSettings
