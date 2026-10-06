@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class test : MonoBehaviour
+public class blinking : MonoBehaviour
 {
     // Start is called before the first frame update
+    private SpriteRenderer spriteRenderer;
     void Start()
     {
-        Debug.Log("Hello World!");
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Update called! " + Time.frameCount);
+        spriteRenderer.enabled = !spriteRenderer.enabled;
     }
 }
