@@ -1,0 +1,27 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class EnemyHealth : MonoBehaviour
+{
+    // Start is called before the first frame update
+    public GameObject explosionPrefab;
+     private void OnTriggerEnter2D(Collider2D collision) => Die();
+
+    private void Die()
+    {
+    var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
+    Destroy(explosion, 1);
+    Destroy(gameObject);
+    }
+void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}

@@ -4,30 +4,33 @@ using UnityEngine;
 
 public class playershooting : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public GameObject bulletPrefab;
+    public GameObject bulletPrefabs;
+    public float shootingInterval;
+    public Vector3 bulletOffset;
 
-    public Transform firePointLeft;
-    public Transform firePointMiddle;
-    public Transform firePointRight;
+    private float lastBulletTime;
     void Start()
     {
-        
-    }
 
-    // Update is called once per frame
+    }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
-            Shoot(firePointLeft);
-            Shoot(firePointMiddle);
-            Shoot(firePointRight);
+            UpdateFiring();
+        }
+    }
+    private void UpdateFiring()
+    {
+        if (Time.time - lastBulletTime > shootingInterval)
+        {
+            ShootBullet();
+            lastBulletTime = Time.time;
         }
     }
 
-    void Shoot(Transform firePoint)
+    private void ShootBullet()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        var bullet = Instantiate(bulletPrefabs, transform.position + bulletOffset, transform.rotation);
     }
 }
