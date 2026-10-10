@@ -58,21 +58,26 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PlayerMovement.cs" />
-    <Compile Include="Assets\bullet.cs" />
-    <Compile Include="Assets\blinking.cs" />
-    <Compile Include="Assets\playershooting.cs" />
-    <Compile Include="Assets\test.cs" />
+    <Compile Include="Assets\C#\PlayerMovement.cs" />
     <Compile Include="Assets\2D Space Kit\Scripts\AimBeam.cs" />
-    <Compile Include="Assets\2D Space Kit\Scripts\PlayerControlledTurret.cs" />
+    <Compile Include="Assets\C#\bullet.cs" />
+    <Compile Include="Assets\C#\EnemyHealth.cs" />
+    <Compile Include="Assets\C#\blinking.cs" />
+    <Compile Include="Assets\2D Space Kit\Scripts\ParallaxLayer.cs" />
+    <Compile Include="Assets\2D Space Kit\Scripts\Crosshair.cs" />
     <Compile Include="Assets\2D Space Kit\Scripts\ExampleShipControl.cs" />
     <Compile Include="Assets\2D Space Kit\Scripts\PSDestroy.cs" />
-    <Compile Include="Assets\2D Space Kit\Scripts\CustomPointer.cs" />
     <Compile Include="Assets\2D Space Kit\Scripts\Projectile.cs" />
-    <Compile Include="Assets\2D Space Kit\Scripts\ParallaxLayer.cs" />
+    <Compile Include="Assets\C#\playershooting.cs" />
     <Compile Include="Assets\2D Space Kit\Scripts\ShipCamera.cs" />
-    <Compile Include="Assets\2D Space Kit\Scripts\Crosshair.cs" />
-    <Compile Include="Assets\EnemyHealth.cs" />
+    <Compile Include="Assets\2D Space Kit\Scripts\PlayerControlledTurret.cs" />
+    <Compile Include="Assets\2D Space Kit\Scripts\CustomPointer.cs" />
+    <Compile Include="Assets\C#\ScrollingBackground.cs" />
+    <Compile Include="Assets\C#\playerhealth.cs" />
+    <Compile Include="Assets\C#\Health.cs" />
+    <Compile Include="Assets\C#\enemyshooting.cs" />
+    <Compile Include="Assets\C#\enemybullet.cs" />
+    <Compile Include="Assets\C#\EnemyAttack.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\2D Space Kit\Backgrounds\Background Tip.txt" />
