@@ -12,6 +12,9 @@ public class Health : MonoBehaviour
     public int defaultHealthPoint = 3;     // Máu mặc định (đặt là 3)
     private int healthPoint;
 
+    // Khai báo sự kiện khi đối tượng bị tiêu diệt
+    public System.Action onDead;
+
     private void Start()
     {
         healthPoint = defaultHealthPoint;
@@ -47,6 +50,9 @@ public class Health : MonoBehaviour
             var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
             Destroy(explosion, 1f); // Tự hủy hiệu ứng nổ sau 1 giây
         }
+
+        // Thông báo sự kiện chết cho các script khác đang lắng nghe (ví dụ: GameManager để hiện Game Over)
+        onDead?.Invoke();
 
         // Xóa đối tượng khỏi màn chơi
         Destroy(gameObject);
