@@ -1,8 +1,14 @@
 using UnityEngine;
 
-public class enemybullet : MonoBehaviour
+public class EnemyBullet : MonoBehaviour
 {
     public float flySpeed = 5f;
+
+    void Start()
+    {
+       
+        transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+    }
 
     void Update()
     {
@@ -15,10 +21,10 @@ public class enemybullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Nếu chạm vào Player thì trừ máu Player
-        playerhealth playerhealth = collision.GetComponent<playerhealth>();
-        if (playerhealth != null)
+        PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
+        if (playerHealth != null)
         {
-            playerhealth.TakeDamage(1);
+            playerHealth.TakeDamage(1);
             Destroy(gameObject); // Hủy viên đạn sau khi trúng Player
         }
     }

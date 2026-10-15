@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyshooting : MonoBehaviour
+public class EnemyShooting : MonoBehaviour
 {
     public GameObject enemyBulletPrefab; // Prefab đạn của địch
     public float fireRate = 2f;          // Thời gian giữa các lần bắn (giây)

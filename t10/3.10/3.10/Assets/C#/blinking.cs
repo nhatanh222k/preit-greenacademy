@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class blinking : MonoBehaviour
+public class Blinking : MonoBehaviour
 {
     // Start is called before the first frame update
     private SpriteRenderer spriteRenderer;

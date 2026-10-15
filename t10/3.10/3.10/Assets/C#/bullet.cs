@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     public float flySpeed;
     public int damage = 1; // 1. Khai báo biến sát thương ở đây
@@ -21,11 +21,11 @@ public class bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Health enemyHealth = collision.GetComponent<Health>();
+        Health EnemyHealth = collision.GetComponent<Health>();
 
-        if (enemyHealth != null)
+        if (EnemyHealth != null)
         {
-            enemyHealth.TakeDamage(damage); // 2. Truyền biến damage vào đây
+            EnemyHealth.TakeDamage(damage); // 2. Truyền biến damage vào đây
             Destroy(gameObject);
         }
     }

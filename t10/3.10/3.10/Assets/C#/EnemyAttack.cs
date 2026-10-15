@@ -10,10 +10,10 @@ public class EnemyAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var playerhealth = collision.GetComponent<playerhealth>();
-        if (playerhealth != null)
+        var PlayerHealth = collision.GetComponent<PlayerHealth>();
+        if (PlayerHealth != null)
         {
-            playerhealth.TakeDamage(damage);
+            PlayerHealth.TakeDamage(damage);
             health.TakeDamage(1000);
         }
  }

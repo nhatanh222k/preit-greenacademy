@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playershooting : MonoBehaviour
+public class PlayerShooting : MonoBehaviour
 {
     public GameObject bulletPrefabs;
     public float shootingInterval;
