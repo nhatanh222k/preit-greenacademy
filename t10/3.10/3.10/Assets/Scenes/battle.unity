@@ -218,22 +218,6 @@ MonoBehaviour:
   hitEffectPrefab: {fileID: 1860706049015914, guid: 0b0c27137eb4d504096874b80ace66bd, type: 3}
   explosionPrefab: {fileID: 4548601337994703503, guid: f0aa07dc18ab35643962d8dbbe6eaa45, type: 3}
   defaultHealthPoint: 6
---- !u!114 &28752379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 28752370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1318e147a30dab4383c0a294c6fd492, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameOverUI: {fileID: 1588734272}
-  gameWinUI: {fileID: 1481668912}
-  bgMusic: {fileID: 0}
-  playerHealth: {fileID: 28752378}
 --- !u!114 &28752381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,7 +347,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 28752379}
+      - m_Target: {fileID: 1066012586}
         m_TargetAssemblyTypeName: BattleFlow, Assembly-CSharp
         m_MethodName: ReturnToMainMenu
         m_Mode: 1
@@ -796,7 +780,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 28752379}
+      - m_Target: {fileID: 1066012586}
         m_TargetAssemblyTypeName: BattleFlow, Assembly-CSharp
         m_MethodName: ReturnToMainMenu
         m_Mode: 1
@@ -2055,6 +2039,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043526810}
   m_CullTransparentMesh: 1
+--- !u!1 &1066012585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1066012587}
+  - component: {fileID: 1066012586}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1066012586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066012585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1318e147a30dab4383c0a294c6fd492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverUI: {fileID: 1588734272}
+  gameWinUI: {fileID: 1481668912}
+  bgMusic: {fileID: 0}
+  playerHealth: {fileID: 28752378}
+--- !u!4 &1066012587
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066012585}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1114210406
 GameObject:
   m_ObjectHideFlags: 0
