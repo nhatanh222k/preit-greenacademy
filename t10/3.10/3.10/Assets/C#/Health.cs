@@ -12,12 +12,14 @@ public class Health : MonoBehaviour
     public int defaultHealthPoint = 3;     // Máu mặc định (đặt là 3)
     private int healthPoint;
 
-    // Khai báo sự kiện khi đối tượng bị tiêu diệt
+    // Khai báo sự kiện khi đối tượng bị tiêu diệt hoặc máu thay đổi
     public System.Action onDead;
+    public System.Action onHealthChanged;
 
     private void Start()
     {
         healthPoint = defaultHealthPoint;
+        onHealthChanged?.Invoke();
     }
 
     // Hàm nhận sát thương
@@ -32,10 +34,13 @@ public class Health : MonoBehaviour
             Destroy(hitEffect, 0.5f); // Tự hủy hiệu ứng trúng sau 0.5 giây để nhẹ game
         }
 
-        // Trừ máu
+        // 2. Trừ máu (chỉ trừ 1 lần duy nhất)
         healthPoint -= damage;
 
-        // 2. Nếu máu giảm về 0 (đủ 3 viên): Kích hoạt hiệu ứng nổ và tiêu diệt đối tượng
+        // 3. Gọi sự kiện báo cho thanh máu cập nhật giao diện
+        onHealthChanged?.Invoke();
+
+        // 4. Nếu máu giảm về 0 hoặc nhỏ hơn: Gọi hàm Die()
         if (healthPoint <= 0)
         {
             Die();
@@ -51,10 +56,14 @@ public class Health : MonoBehaviour
             Destroy(explosion, 1f); // Tự hủy hiệu ứng nổ sau 1 giây
         }
 
-        // Thông báo sự kiện chết cho các script khác đang lắng nghe (ví dụ: GameManager để hiện Game Over)
+        // Thông báo sự kiện chết cho các script khác đang lắng nghe
         onDead?.Invoke();
 
         // Xóa đối tượng khỏi màn chơi
         Destroy(gameObject);
+    }
+    public int GetCurrentHealthPoint()
+    {
+        return healthPoint;
     }
 }
