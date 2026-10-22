@@ -115,6 +115,11 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\2D Space Kit\Scripts\CustomPointer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\C#\Waypoint.cs" />
+    <Compile Include="Assets\C#\FlyPath.cs" />
+    <Compile Include="Assets\C#\FlyPathAgent.cs" />
+    <Compile Include="Assets\C#\EnemyWave.cs" />
+    <Compile Include="Assets\C#\EnemySpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
