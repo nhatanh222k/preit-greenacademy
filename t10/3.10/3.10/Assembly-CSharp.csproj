@@ -65,6 +65,7 @@
     <Compile Include="Assets\2D Space Kit\Scripts\AimBeam.cs" />
     <Compile Include="Assets\C#\Bullet.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+    <Compile Include="Assets\C#\EnemySpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\C#\BattleFlow.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
@@ -86,9 +87,12 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
+    <Compile Include="Assets\C#\Waypoint.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\C#\EnemyWave.cs" />
     <Compile Include="Assets\2D Space Kit\Scripts\Crosshair.cs" />
     <Compile Include="Assets\C#\MainMenu.cs" />
+    <Compile Include="Assets\C#\FlyPath.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\2D Space Kit\Scripts\ExampleShipControl.cs" />
     <Compile Include="Assets\2D Space Kit\Scripts\PSDestroy.cs" />
@@ -99,6 +103,7 @@
     <Compile Include="Assets\C#\EnemyBullet.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\C#\PlayerShooting.cs" />
+    <Compile Include="Assets\C#\FlyPathAgent.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
@@ -115,11 +120,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\2D Space Kit\Scripts\CustomPointer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
-    <Compile Include="Assets\C#\Waypoint.cs" />
-    <Compile Include="Assets\C#\FlyPath.cs" />
-    <Compile Include="Assets\C#\FlyPathAgent.cs" />
-    <Compile Include="Assets\C#\EnemyWave.cs" />
-    <Compile Include="Assets\C#\EnemySpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

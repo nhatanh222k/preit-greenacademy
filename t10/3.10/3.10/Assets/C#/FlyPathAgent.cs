@@ -6,27 +6,41 @@ public class FlyPathAgent : MonoBehaviour
 {
     public FlyPath flypath;
     public float flyspeed;
-    private int nextIndex = 1;
+    private int nextIndex = 1; // Giữ nguyên giá trị 1 để bay tiếp từ vị trí được Spawn theo formation
 
-    // Start is called before the first frame update
-    //id Start() => transform.position = flypath[0];
+    void Start()
+    {
+        // Để trống để giữ nguyên vị trí và khoảng cách formation mà EnemySpawner đã tạo ra
+    }
 
-    // Update is called once per frame
     void Update()
     {
-        if (flypath == null) return;
-        if (nextIndex >= flypath.waypoints.Length) return;
-        if(transform.position != flypath[nextIndex])
+        if (flypath == null || flypath.waypoints.Length == 0) return;
+
+        // Nếu chạy đến điểm cuối cùng, vòng lặp lại từ đầu (Waypoint 0)
+        if (nextIndex >= flypath.waypoints.Length)
         {
-            FlyToNextWaypoint();
-            LookAt(flypath[nextIndex]);
+            nextIndex = 0;
+        }
+
+        Vector2 targetPosition = flypath[nextIndex];
+
+        if ((Vector2)transform.position != targetPosition)
+        {
+            FlyToNextWaypoint(targetPosition);
+            LookAt(targetPosition);
         }
         else
         {
             nextIndex++;
         }
     }
-    private void FlyToNextWaypoint() => transform.position = Vector3.MoveTowards(transform.position, flypath[nextIndex], flyspeed * Time.deltaTime);
+
+    private void FlyToNextWaypoint(Vector2 target)
+    {
+        transform.position = Vector3.MoveTowards(transform.position, target, flyspeed * Time.deltaTime);
+    }
+
     private void LookAt(Vector2 destination)
     {
         Vector2 position = transform.position;

@@ -31,7 +31,7 @@ public class Health : MonoBehaviour
         if (hitEffectPrefab != null)
         {
             var hitEffect = Instantiate(hitEffectPrefab, transform.position, transform.rotation);
-            Destroy(hitEffect, 0.5f); // Tự hủy hiệu ứng trúng sau 0.5 giây để nhẹ game
+            Destroy(hitEffect, 0.2f); // Tự hủy hiệu ứng trúng sau 0.2 giây để nhẹ game
         }
 
         // 2. Trừ máu (chỉ trừ 1 lần duy nhất)
@@ -53,7 +53,7 @@ public class Health : MonoBehaviour
         if (explosionPrefab != null)
         {
             var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
-            Destroy(explosion, 1f); // Tự hủy hiệu ứng nổ sau 1 giây
+            Destroy(explosion, 0.4f); // Tự hủy hiệu ứng nổ sau 0.4 giây
         }
 
         // Thông báo sự kiện chết cho các script khác đang lắng nghe

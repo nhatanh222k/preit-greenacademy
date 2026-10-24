@@ -156,7 +156,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: a507e4d319138d44482579bc5610a9e5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8d5f697c999643441bb417d834c597de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -184,7 +184,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.42, y: 0.34}
+    oldSize: {x: 0.31, y: 0.48}
     newSize: {x: 0.42, y: 0.34}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -226,9 +226,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bdc9dbb130bc7245a398724da4b73d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffectPrefab: {fileID: 1019480068096796, guid: 1740469607c5ef74a9dce354e6c48998, type: 3}
-  explosionPrefab: {fileID: 4548601337994703503, guid: f0aa07dc18ab35643962d8dbbe6eaa45, type: 3}
-  defaultHealthPoint: 10
+  hitEffectPrefab: {fileID: 4339140150627778144, guid: b512f697072f22a48b77aa3b9afb3749, type: 3}
+  explosionPrefab: {fileID: 4256975448348671325, guid: 8b5fce7636a269b49aa9d26b1ad60725, type: 3}
+  defaultHealthPoint: 7
 --- !u!114 &2821765081175748505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,8 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12df2bee75332cd4fa112ada783d8f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBulletPrefab: {fileID: 1973797488871700, guid: 48e06088b7e195f40898a828bd389ec3, type: 3}
-  fireRate: 4
+  enemyBulletPrefab: {fileID: 1973797488871700, guid: 8f0992cadc0275a48953219664bf5762, type: 3}
+  fireRate: 2
 --- !u!114 &2821765081175748504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 2821765081175748506}
-  damage: 1
+  damage: 2
 --- !u!114 &2821765081175748507
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -420,8 +420,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bdc9dbb130bc7245a398724da4b73d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffectPrefab: {fileID: 1019480068096796, guid: 1740469607c5ef74a9dce354e6c48998, type: 3}
-  explosionPrefab: {fileID: 4548601337994703503, guid: f0aa07dc18ab35643962d8dbbe6eaa45, type: 3}
+  hitEffectPrefab: {fileID: 4339140150627778144, guid: b512f697072f22a48b77aa3b9afb3749, type: 3}
+  explosionPrefab: {fileID: 4256975448348671325, guid: 8b5fce7636a269b49aa9d26b1ad60725, type: 3}
   defaultHealthPoint: 10
 --- !u!114 &2046517702056151759
 MonoBehaviour:
@@ -450,7 +450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 2046517702056151794}
-  damage: 1
+  damage: 3
 --- !u!114 &2046517702056151793
 MonoBehaviour:
   m_ObjectHideFlags: 0
