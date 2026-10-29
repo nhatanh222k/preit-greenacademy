@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
 
 public class EnemyHealth : Health
 {
     public static int LivingEnemyCount { get; private set; }
+    public event Action<EnemyHealth> onEnemyKilled;
 
     private bool countedAsAlive = false;
 

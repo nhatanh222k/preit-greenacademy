@@ -114,7 +114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1801360927775158864
 Transform:
   m_ObjectHideFlags: 0
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyBulletPrefab: {fileID: 1973797488871700, guid: 48d0d991d3c85114282ffa6129d71a21, type: 3}
-  fireRate: 4
+  fireRate: 1
 --- !u!114 &1801360927775158877
 MonoBehaviour:
   m_ObjectHideFlags: 0

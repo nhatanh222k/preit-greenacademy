@@ -43,5 +43,9 @@ public class BossFlyPath : MonoBehaviour
     private void FlyToNextWaypoint(Vector2 target)
     {
         transform.position = Vector3.MoveTowards(transform.position, target, flyspeed * Time.deltaTime);
+        // Tính toán hướng di chuyển để xoay đầu Boss hướng xuống dưới hoặc hướng theo đường bay
+        Vector2 direction = (target - (Vector2)transform.position).normalized;
+
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, 180f));
     }
 }

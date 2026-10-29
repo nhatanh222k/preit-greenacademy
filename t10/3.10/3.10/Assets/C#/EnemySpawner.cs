@@ -14,13 +14,18 @@ public class EnemySpawner : MonoBehaviour
     public GameObject bossPrefab;           // Prefab của Boss
     public FlyPath bossFlyPath;             // Đường bay riêng dành cho Boss
     public float bossFlySpeed = 3f;         // Tốc độ bay của Boss
-    private bool bossSpawned = false;       // Đảm bảo Boss chỉ spawn 1 lần
+    public bool bossSpawned = false;       // Đảm bảo Boss chỉ spawn 1 lần
 
-    // Start is called before the first frame update
-    void Start() => SpawnEnemyWave();
+    void Start()
+    {
+        SpawnEnemyWave();
+    }
 
     private void SpawnEnemyWave()
     {
+        // Nếu đã chạy quá số wave hiện có thì dừng lại
+        if (currentWave >= enemyWaves.Length) return;
+
         var waveInfo = enemyWaves[currentWave];
         var startPosition = waveInfo.flyPath[0];
 
@@ -28,7 +33,6 @@ public class EnemySpawner : MonoBehaviour
         {
             var enemy = Instantiate(waveInfo.enemyPrefab, startPosition, Quaternion.identity);
 
-            // Gán đường bay cho quái thường
             var agent = enemy.GetComponent<FlyPathAgent>();
             if (agent != null)
             {
@@ -36,49 +40,64 @@ public class EnemySpawner : MonoBehaviour
                 agent.flyspeed = waveInfo.speed;
             }
 
-            // Đăng ký sự kiện khi quái chết để trừ số lượng
             var health = enemy.GetComponent<EnemyHealth>();
             if (health != null)
             {
                 health.onEnemyKilled += OnEnemyKilled;
             }
 
-            aliveEnemiesCount++; // Tăng số lượng quái đang sống lên 1
+            aliveEnemiesCount++;
             startPosition += waveInfo.formationOffset;
         }
 
         currentWave++;
 
-        // Nếu còn wave tiếp theo thì tiếp tục lên lịch spawn
+        // KIỂM TRA ĐOẠN NÀY:
         if (currentWave < enemyWaves.Length)
         {
+            // Vẫn còn wave tiếp theo thì tiếp tục hẹn giờ spawn
             Invoke(nameof(SpawnEnemyWave), waveInfo.nextWaveDelay);
         }
         else
         {
-            allWavesSpawned = true; // Đã sinh xong toàn bộ các wave quái thường
+            
+            allWavesSpawned = true;
+            Debug.Log("Đã spawn xong tất cả các wave quái thường!");
         }
     }
 
     // Hàm này nhận tín hiệu khi có 1 con quái chết
-    public void OnEnemyKilled()
+    public void OnEnemyKilled(EnemyHealth enemy)
     {
         aliveEnemiesCount--;
+        if (aliveEnemiesCount < 0) aliveEnemiesCount = 0;
 
-        // Nếu đã sinh hết quái, số lượng quái sống bằng 0 và Boss chưa xuất hiện -> Spawn Boss!
-        if (allWavesSpawned && aliveEnemiesCount <= 0 && !bossSpawned)
+        Debug.Log($"Quái chết. Số quái còn lại trong hàng đợi: {aliveEnemiesCount} | Đã xong tất cả wave: {allWavesSpawned}");
+    }
+
+    private void Update()
+    {
+        // Kiểm tra liên tục: Nếu đã sinh hết các wave quái thường, 
+        // toàn bộ quái trên màn hình đã bị tiêu diệt sạch (<= 0) và Boss chưa từng được gọi
+        if (allWavesSpawned && EnemyHealth.LivingEnemyCount <= 0 && !bossSpawned)
         {
+            Debug.Log("Tất cả quái thường đã tiêu diệt. Tiến hành gọi Boss!");
             SpawnBoss();
         }
     }
 
     private void SpawnBoss()
     {
-        if (bossPrefab == null) return;
+        if (bossPrefab == null)
+        {
+            Debug.LogError("EnemySpawner: Chưa gán Boss Prefab trong Inspector!");
+            return;
+        }
 
         bossSpawned = true;
+        Debug.Log("Đang tiến hành Spawn Boss!");
 
-        // Xác định vị trí xuất hiện của Boss (lấy waypoint đầu tiên của đường bay Boss, hoặc vị trí Spawner)
+        // Xác định vị trí xuất hiện của Boss
         Vector3 spawnPos = (bossFlyPath != null && bossFlyPath.waypoints.Length > 0)
                            ? (Vector3)bossFlyPath[0]
                            : transform.position;
@@ -86,18 +105,15 @@ public class EnemySpawner : MonoBehaviour
         // Tạo Boss ra màn hình
         var boss = Instantiate(bossPrefab, spawnPos, Quaternion.identity);
 
-        // [QUAN TRỌNG] Tự động gán đường bay và tốc độ cho Boss ngay khi sinh ra
+        // Gán đường bay và tốc độ cho Boss
         var bossAgent = boss.GetComponent<BossFlyPath>();
         if (bossAgent != null)
         {
             bossAgent.flypath = bossFlyPath;
             bossAgent.flyspeed = bossFlySpeed;
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-
+        // [TÙY CHỌN] Nếu bạn muốn khi Boss chết mới hiện bảng Win, 
+        // bạn có thể đăng ký sự kiện onEnemyKilled của Boss ở đây tương tự quái thường.
     }
 }

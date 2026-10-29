@@ -295,8 +295,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffectPrefab: {fileID: 4339140150627778144, guid: b512f697072f22a48b77aa3b9afb3749, type: 3}
-  explosionPrefab: {fileID: 4256975448348671325, guid: 8b5fce7636a269b49aa9d26b1ad60725, type: 3}
-  defaultHealthPoint: 50
+  explosionPrefab: {fileID: 4256975448348671325, guid: ec313d721b5b0244b8a4c415dfee23b8, type: 3}
+  defaultHealthPoint: 200
 --- !u!114 &4077885389059809769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flypath: {fileID: 0}
-  flyspeed: 0.5
+  flyspeed: 0.8
 --- !u!114 &4077885389059809770
 MonoBehaviour:
   m_ObjectHideFlags: 0

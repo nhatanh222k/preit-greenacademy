@@ -60,9 +60,18 @@ public class BattleFlow : MonoBehaviour
         if (isGameOver || isGameWon)
             return;
 
-        if (EnemyHealth.LivingEnemyCount <= 0)
+        // Tìm EnemySpawner trong scene
+        EnemySpawner spawner = FindFirstObjectByType<EnemySpawner>();
+
+        if (spawner != null)
         {
-            OnGameWin();
+            // ĐIỀU KIỆN THẮNG: 
+            // 1. Boss bắt buộc phải đã được spawn ra rồi (tránh việc thắng ngay đầu game lúc chưa có quái)
+            // 2. Tổng số lượng enemy/boss sống trên màn hình (LivingEnemyCount) đã về 0 (tức là Boss đã chết)
+            if (spawner.bossSpawned && EnemyHealth.LivingEnemyCount <= 0)
+            {
+                OnGameWin();
+            }
         }
     }
 
