@@ -460,7 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc48f50d69a45404f97f638b579c3c84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyBulletPrefab: {fileID: 1973797488871700, guid: 48e06088b7e195f40898a828bd389ec3, type: 3}
+  enemyBulletPrefab: {fileID: 1860706049015914, guid: 0b0c27137eb4d504096874b80ace66bd, type: 3}
   bulletOffset: {x: 0, y: -3, z: 0}
   timeBetweenBullets: 0
   burstDuration: 10

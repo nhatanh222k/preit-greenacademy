@@ -5,12 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float flySpeed;
-    public int damage = 1; // 1. Khai báo biến sát thương ở đây
-
-    void Start()
-    {
-
-    }
+    public int damage = 1;
 
     void Update()
     {
@@ -21,11 +16,17 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Health EnemyHealth = collision.GetComponent<Health>();
+        Health targetHealth = collision.GetComponent<Health>();
 
-        if (EnemyHealth != null)
+        if (targetHealth != null)
         {
-            EnemyHealth.TakeDamage(damage); // 2. Truyền biến damage vào đây
+            // Lấy điểm tiếp xúc chính xác trên Collider của mục tiêu
+            Vector2 hitPoint = collision.ClosestPoint(transform.position);
+
+            // Gây sát thương và truyền vị trí dính đạn vào Health
+            targetHealth.TakeDamage(damage, hitPoint);
+
+            // Hủy viên đạn
             Destroy(gameObject);
         }
     }

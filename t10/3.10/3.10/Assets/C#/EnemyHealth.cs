@@ -31,8 +31,6 @@ public class EnemyHealth : Health
 
     private void OnDestroy()
     {
-        // Nếu địch bị xóa mà không chết qua TakeDamage,
-        // vẫn cập nhật bộ đếm.
         if (countedAsAlive)
         {
             LivingEnemyCount--;

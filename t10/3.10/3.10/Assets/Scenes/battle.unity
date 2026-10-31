@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefabs: {fileID: 7188680194858324626, guid: d25a27449b69fe845852b55cd4fcb777, type: 3}
-  shootingInterval: 0.1
+  shootingInterval: 0.2
   bulletOffset: {x: 0, y: 0.5, z: 0}
 --- !u!114 &28752382
 MonoBehaviour:
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefabs: {fileID: 7188680194858324626, guid: d25a27449b69fe845852b55cd4fcb777, type: 3}
-  shootingInterval: 0.1
+  shootingInterval: 0.2
   bulletOffset: {x: 0.3, y: 0.45, z: 0}
 --- !u!114 &28752383
 MonoBehaviour:
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefabs: {fileID: 7188680194858324626, guid: d25a27449b69fe845852b55cd4fcb777, type: 3}
-  shootingInterval: 0.1
+  shootingInterval: 0.2
   bulletOffset: {x: -0.3, y: 0.45, z: 0}
 --- !u!1001 &32652453
 PrefabInstance:
@@ -2435,7 +2435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &602072182
 Transform:
   m_ObjectHideFlags: 0
@@ -4690,38 +4690,36 @@ MonoBehaviour:
     numberOfEnemy: 10
     formationOffset: {x: 0, y: 2, z: 0}
     flyPath: {fileID: 617338293}
-    speed: 2
+    speed: 1.8
     nextWaveDelay: 7
   - enemyPrefab: {fileID: 1801360927775158864, guid: 5e0a223e53e460d49a1fd388ed3c46b3, type: 3}
     numberOfEnemy: 10
     formationOffset: {x: 0, y: 2, z: 0}
-    flyPath: {fileID: 304048715}
-    speed: 1.5
-    nextWaveDelay: 3
+    flyPath: {fileID: 1283357075}
+    speed: 2.5
+    nextWaveDelay: 7
   - enemyPrefab: {fileID: 2821765081175748509, guid: fe9624249da91b641a08091c7e87272d, type: 3}
     numberOfEnemy: 10
     formationOffset: {x: 0, y: 2, z: 0}
     flyPath: {fileID: 321096679}
-    speed: 1
-    nextWaveDelay: 3
+    speed: 2
+    nextWaveDelay: 7
   - enemyPrefab: {fileID: 2046517702056151795, guid: 41f866358695e3f4f95a7ff8c1440947, type: 3}
     numberOfEnemy: 10
     formationOffset: {x: 0, y: 2, z: 0}
-    flyPath: {fileID: 1283357075}
-    speed: 2
-    nextWaveDelay: 2
+    flyPath: {fileID: 304048715}
+    speed: 1.8
+    nextWaveDelay: 7
   - enemyPrefab: {fileID: 3588424402232611044, guid: ea510f6d908f0554f8143691e0a8010f, type: 3}
     numberOfEnemy: 10
     formationOffset: {x: 0, y: 2, z: 0}
     flyPath: {fileID: 762876884}
-    speed: 1.5
-    nextWaveDelay: 2
-  - enemyPrefab: {fileID: 4077885389059809768, guid: d3556d4a869ffde48a55d08af66d25c0, type: 3}
-    numberOfEnemy: 2
-    formationOffset: {x: 0, y: 2, z: 0}
-    flyPath: {fileID: 1661623591}
-    speed: 2
-    nextWaveDelay: 0
+    speed: 1.8
+    nextWaveDelay: 7
+  bossPrefab: {fileID: 4077885389059809776, guid: d3556d4a869ffde48a55d08af66d25c0, type: 3}
+  bossFlyPath: {fileID: 1661623591}
+  bossFlySpeed: 0.8
+  bossSpawned: 0
 --- !u!4 &1145611026
 Transform:
   m_ObjectHideFlags: 0

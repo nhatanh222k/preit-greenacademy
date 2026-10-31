@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     public float flySpeed = 5f;
+    public int damage;
 
     void Start()
     {
@@ -24,7 +25,8 @@ public class EnemyBullet : MonoBehaviour
         PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
         if (playerHealth != null)
         {
-            playerHealth.TakeDamage(1);
+            Vector2 hitPoint = collision.ClosestPoint(transform.position);
+            playerHealth.TakeDamage(damage, hitPoint);
             Destroy(gameObject); // Hủy viên đạn sau khi trúng Player
         }
     }

@@ -22,19 +22,25 @@ public class Health : MonoBehaviour
         onHealthChanged?.Invoke();
     }
 
-    // Hàm nhận sát thương
+    // Hàm nhận sát thương cơ bản (dùng khi không quan tâm vị trí, mặc định tạo ở tâm nhân vật)
     public void TakeDamage(int damage)
+    {
+        TakeDamage(damage, transform.position);
+    }
+
+    // NÂNG CẤP: Hàm nhận sát thương có kèm vị trí dính đạn chính xác
+    public virtual void TakeDamage(int damage, Vector2 hitPoint)
     {
         if (healthPoint <= 0) return;
 
-        // 1. Mỗi lần trúng đạn: Tạo hiệu ứng trúng (Hit Effect) ngay tại vị trí nhân vật
+        // 1. Tạo hiệu ứng trúng (Hit Effect) ngay tại vị trí dính đạn thay vì tâm nhân vật
         if (hitEffectPrefab != null)
         {
-            var hitEffect = Instantiate(hitEffectPrefab, transform.position, transform.rotation);
-            Destroy(hitEffect, 0.2f); // Tự hủy hiệu ứng trúng sau 0.2 giây để nhẹ game
+            var hitEffect = Instantiate(hitEffectPrefab, hitPoint, Quaternion.identity);
+            Destroy(hitEffect, 0.2f); // Tự hủy hiệu ứng trúng sau 0.2 giây
         }
 
-        // 2. Trừ máu (chỉ trừ 1 lần duy nhất)
+        // 2. Trừ máu
         healthPoint -= damage;
 
         // 3. Gọi sự kiện báo cho thanh máu cập nhật giao diện
@@ -49,19 +55,17 @@ public class Health : MonoBehaviour
 
     protected virtual void Die()
     {
-        // Tạo hiệu ứng nổ lớn khi chết
+        // Tạo hiệu ứng nổ lớn khi chết tại tâm nhân vật
         if (explosionPrefab != null)
         {
             var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
-            Destroy(explosion, 0.4f); // Tự hủy hiệu ứng nổ sau 0.4 giây
+            Destroy(explosion, 0.4f);
         }
 
-        // Thông báo sự kiện chết cho các script khác đang lắng nghe
         onDead?.Invoke();
-
-        // Xóa đối tượng khỏi màn chơi
         Destroy(gameObject);
     }
+
     public int GetCurrentHealthPoint()
     {
         return healthPoint;

@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    // Biểu thị lượng máu của Enemy (dùng để tiêu diệt enemy sau khi va chạm)
     public EnemyHealth health;
-
-    // Lượng sát thương mà Enemy này gây ra cho người chơi
     public int damage;
 
-    // Hàm này được Unity tự động gọi khi có một Collider khác đi vào vùng va chạm (Trigger) của Enemy
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Cố gắng lấy component 'PlayerHealth' từ đối tượng vừa va chạm vào
