@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,7 +103,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: blue_suit_body_0
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 548
+        width: 54
+        height: 146
+      alignment: 9
+      pivot: {x: 0.5000003, y: 0.86602324}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c680b593b7873004597caa0b2e501270
+      internalID: 1415423764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_suit_body_1
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 458
+        width: 216
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a4622343aa18841b11804e4d086c6b
+      internalID: -231424232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_suit_body_2
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 546
+        width: 54
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a57e29686987ae409700e2fd35bec5f
+      internalID: 1412637704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_suit_body_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 354
+        width: 54
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 546f3785c2090ee46a0700ffc2657c99
+      internalID: 612706319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_suit_body_4
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 228
+        width: 56
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eefa75a2ef364548a97861a0bb41ddc
+      internalID: 1677443193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_suit_body_5
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 228
+        width: 54
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e006442792e14458f6a0f8be637ac0
+      internalID: 790485715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_suit_body_6
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 354
+        width: 54
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aefee4c1a1f88a44b8b6527d2686e2d
+      internalID: -1000623617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_suit_body_7
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 50
+        width: 81
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 162dfdd33c9577d4bb88625f6ee2b212
+      internalID: 62920175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_suit_body_8
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 50
+        width: 81
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c311eefa9111917469cd852d26df3213
+      internalID: 1708260537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +303,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      blue_suit_body_0: 1415423764
+      blue_suit_body_1: -231424232
+      blue_suit_body_2: 1412637704
+      blue_suit_body_3: 612706319
+      blue_suit_body_4: 1677443193
+      blue_suit_body_5: 790485715
+      blue_suit_body_6: -1000623617
+      blue_suit_body_7: 62920175
+      blue_suit_body_8: 1708260537
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
