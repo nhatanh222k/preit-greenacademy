@@ -58,11 +58,11 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\C#\AimController.cs" />
     <Compile Include="Assets\C#\PlayerShooting.cs" />
-    <Compile Include="Assets\C#\Bullet.cs" />
-    <Compile Include="Assets\C#\Enemy.cs" />
     <Compile Include="Assets\C#\BloodEffect.cs" />
+    <Compile Include="Assets\C#\Bullet.cs" />
+    <Compile Include="Assets\C#\AimController.cs" />
+    <Compile Include="Assets\C#\Enemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
