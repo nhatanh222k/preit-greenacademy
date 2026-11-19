@@ -32,6 +32,12 @@ public class Enemy : MonoBehaviour
         if (isDead) return;
 
         isDead = true;
+        gameObject.tag = "Untagged";
+        PlayerShooting player = FindObjectOfType<PlayerShooting>();
+        if (player != null)
+        {
+            player.TriggerWin(); // Báo cho Player biết để hiển thị Panel chiến thắng tương ứng (3s, 2s, 1s, hoặc 0s)
+        }
 
         // 1. Đổi hình ảnh đầu chết
         if (headRenderer != null && deadHead != null)
